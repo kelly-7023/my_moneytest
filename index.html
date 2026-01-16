@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>溫馨記帳手帳</title>
+    
+    <!-- PWA 設置 -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#F7F5E6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="記帳手帳">
+    
+    <!-- iOS 圖示 (這裡使用一個通用的書本 emoji 作為圖示) -->
+    <link rel="apple-touch-icon" href="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f4d2.png">
+    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #F7F5E6;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 把這裡的 src 換成你的 Apps Script 網址 -->
+    <iframe src="https://script.google.com/macros/s/AKfycby0pxcBe24M_4gqtooaFMaLBwOLbEHzr4eDDtcuyEqN8gPb6saEswQ9KvjslOYzX8_L_Q/exec"></iframe>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
